@@ -1,0 +1,10 @@
+services:
+  rabbit-mq:
+    image: rabbitmq:4-management-alpine
+    container_name: rabbit_mq
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - ./rabbitmq_data/:/var/lib/rabbitmq
+      - ./rabbitmq_log/:/var/log/rabbitmq
